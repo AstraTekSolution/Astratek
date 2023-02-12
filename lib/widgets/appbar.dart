@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TekAppBar extends StatelessWidget {
   @override
@@ -26,20 +27,28 @@ class WebAppBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              "AstraTek Solution.",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
+            Text("AstraTek Solution.",
+                style: GoogleFonts.titilliumWeb(
+                  fontSize: 40,
                   color: Colors.white,
-                  fontSize: 30),
-            ),
+                  fontWeight: FontWeight.bold,
+                )
+                //  TextStyle(
+                //     fontWeight: FontWeight.bold,
+                //     color: Colors.white,
+                //     // fontFamily: "Titillium Web",
+                //     fontSize: 30),
+                ),
             Row(
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: const Text(
+                  child: Text(
                     "Home",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.titilliumWeb(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   ),
                 ),
                 const SizedBox(
@@ -47,9 +56,12 @@ class WebAppBar extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: const Text(
-                    "Our Service",
-                    style: TextStyle(color: Colors.white),
+                  child: Text(
+                    "Service",
+                    style: GoogleFonts.titilliumWeb(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   ),
                 ),
                 const SizedBox(
@@ -57,24 +69,27 @@ class WebAppBar extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: const Text(
-                    "About Us",
-                    style: TextStyle(color: Colors.white),
+                  child: Text(
+                    "About",
+                    style: GoogleFonts.titilliumWeb(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   ),
                 ),
                 const SizedBox(
                   width: 30,
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    "Contact Us",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                const SizedBox(
-                  width: 30,
-                ),
+                // TextButton(
+                //   onPressed: () {},
+                //   child: const Text(
+                //     "Contact Us",
+                //     style: TextStyle(color: Colors.white),
+                //   ),
+                // ),
+                // const SizedBox(
+                //   width: 30,
+                // ),
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.pink,
@@ -83,9 +98,12 @@ class WebAppBar extends StatelessWidget {
                   ),
                   icon: const Icon(Icons.discord),
                   onPressed: () {},
-                  label: const Text(
+                  label: Text(
                     "Join",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.titilliumWeb(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   ),
                 )
               ],
@@ -101,13 +119,14 @@ class MobileNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 30),
+      padding: const EdgeInsets.only(top: 30),
       child: Column(children: <Widget>[
-        const Text(
-          "AstraTek.",
-          style: TextStyle(
-              fontWeight: FontWeight.bold, color: Colors.white, fontSize: 30),
-        ),
+        Text("AstraTek.",
+            style: GoogleFonts.titilliumWeb(
+              fontSize: 40,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            )),
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: Row(
@@ -115,9 +134,12 @@ class MobileNavbar extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {},
-                child: const Text(
+                child: Text(
                   "Home",
-                  style: TextStyle(color: Colors.white),
+                  style: GoogleFonts.titilliumWeb(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15),
                 ),
               ),
               const SizedBox(
@@ -125,9 +147,12 @@ class MobileNavbar extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {},
-                child: const Text(
+                child: Text(
                   "Services",
-                  style: TextStyle(color: Colors.white),
+                  style: GoogleFonts.titilliumWeb(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15),
                 ),
               ),
               const SizedBox(
@@ -135,9 +160,12 @@ class MobileNavbar extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {},
-                child: const Text(
+                child: Text(
                   "About",
-                  style: TextStyle(color: Colors.white),
+                  style: GoogleFonts.titilliumWeb(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15),
                 ),
               ),
               const SizedBox(
@@ -151,9 +179,12 @@ class MobileNavbar extends StatelessWidget {
                 ),
                 icon: const Icon(Icons.discord),
                 onPressed: () {},
-                label: const Text(
+                label: Text(
                   "Join",
-                  style: TextStyle(color: Colors.white),
+                  style: GoogleFonts.titilliumWeb(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15),
                 ),
               )
             ],
