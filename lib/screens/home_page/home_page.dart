@@ -12,11 +12,34 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xff020714),
       body: ListView(children: [
-        TekAppBar(),
+        // TekAppBar(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
           child: LandingPage(),
         ),
+        Container(
+          width: double.infinity,
+          height: 300,
+          color: Colors.grey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Icon(
+                Icons.video_collection,
+                color: Colors.black,
+                size: 30,
+              ),
+              Text(
+                'Play Video',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
+          ),
+        )
       ]),
     );
   }

@@ -1,5 +1,7 @@
+import 'package:atweb/providers/page_view_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class TekAppBar extends StatelessWidget {
   @override
@@ -24,6 +26,7 @@ class WebAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
       child: Container(
+        color: Color(0xff020714),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -42,7 +45,9 @@ class WebAppBar extends StatelessWidget {
             Row(
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.read<PageViewProvider>().setCurrentPage(0);
+                  },
                   child: Text(
                     "Home",
                     style: GoogleFonts.titilliumWeb(
@@ -55,7 +60,9 @@ class WebAppBar extends StatelessWidget {
                   width: 30,
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.read<PageViewProvider>().setCurrentPage(1);
+                  },
                   child: Text(
                     "Service",
                     style: GoogleFonts.titilliumWeb(
