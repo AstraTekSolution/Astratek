@@ -11,8 +11,9 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final providerPage = Provider.of<PageViewProvider>(context);
     final PageController _pageController = PageController(
-        initialPage: context.watch<PageViewProvider>().currentPage);
+        initialPage: Provider.of<PageViewProvider>(context).currentPage);
     return Scaffold(
         backgroundColor: const Color(0xff020714),
         appBar: PreferredSize(
@@ -20,6 +21,7 @@ class FirstPage extends StatelessWidget {
           child: TekAppBar(),
         ),
         body: PageView(
+          physics: const NeverScrollableScrollPhysics(),
           controller: _pageController,
           pageSnapping: true,
           scrollDirection: Axis.vertical,

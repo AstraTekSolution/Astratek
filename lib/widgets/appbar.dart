@@ -23,6 +23,7 @@ class TekAppBar extends StatelessWidget {
 class WebAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<PageViewProvider>(context);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
       child: Container(
@@ -46,7 +47,7 @@ class WebAppBar extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {
-                    context.read<PageViewProvider>().setCurrentPage(0);
+                    provider.setCurrentPage(0);
                   },
                   child: Text(
                     "Home",
@@ -61,7 +62,7 @@ class WebAppBar extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    context.read<PageViewProvider>().setCurrentPage(1);
+                    provider.setCurrentPage(1);
                   },
                   child: Text(
                     "Service",
@@ -75,7 +76,9 @@ class WebAppBar extends StatelessWidget {
                   width: 30,
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    provider.setCurrentPage(2);
+                  },
                   child: Text(
                     "About",
                     style: GoogleFonts.titilliumWeb(
