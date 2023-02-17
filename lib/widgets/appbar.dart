@@ -128,6 +128,8 @@ class WebAppBar extends StatelessWidget {
 class MobileNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<PageViewProvider>(context);
+
     return Container(
       padding: const EdgeInsets.only(top: 30),
       child: Column(children: <Widget>[
@@ -143,7 +145,9 @@ class MobileNavbar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  provider.setCurrentPage(0);
+                },
                 child: Text(
                   "Home",
                   style: GoogleFonts.titilliumWeb(
@@ -156,7 +160,9 @@ class MobileNavbar extends StatelessWidget {
                 width: 10,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  provider.setCurrentPage(1);
+                },
                 child: Text(
                   "Services",
                   style: GoogleFonts.titilliumWeb(
@@ -169,7 +175,9 @@ class MobileNavbar extends StatelessWidget {
                 width: 10,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  provider.setCurrentPage(2);
+                },
                 child: Text(
                   "About",
                   style: GoogleFonts.titilliumWeb(

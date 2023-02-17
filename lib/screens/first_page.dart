@@ -11,26 +11,19 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final providerPage = Provider.of<PageViewProvider>(context);
-    final PageController _pageController = PageController(
-        initialPage: Provider.of<PageViewProvider>(context).currentPage);
+    List list = [
+      const HomePage(),
+      const ServicePage(),
+      const AboutPage(),
+    ];
     return Scaffold(
-        backgroundColor: const Color(0xff020714),
-        appBar: PreferredSize(
-          preferredSize: const Size(double.infinity, 150),
-          child: TekAppBar(),
-        ),
-        body: PageView(
-          physics: const NeverScrollableScrollPhysics(),
-          controller: _pageController,
-          pageSnapping: true,
-          scrollDirection: Axis.vertical,
-          children: const [
-            HomePage(),
-            ServicePage(),
-            AboutPage(),
-          ],
-        ));
+      backgroundColor: const Color(0xff020714),
+      appBar: PreferredSize(
+        preferredSize: const Size(double.infinity, 150),
+        child: TekAppBar(),
+      ),
+      body: list[Provider.of<PageViewProvider>(context).currentIndex],
+    );
   }
   // Scaffold(
   //   backgroundColor: const Color(0xff020714),
